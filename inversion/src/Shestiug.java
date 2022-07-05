@@ -17,3 +17,5 @@ def check_per(mas1: list, mas2: list):
         counts[i] += 1
         counts[j] += 1
         print(''.join(str(c) + ' ' for c in counts))
+                
+                #python
