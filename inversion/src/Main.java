@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
+    
     private static BufferedReader reader;
     private static BufferedWriter writer;
 
