@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DZ {
+    
     private static BufferedReader reader;
     private static BufferedWriter writer;
     private static long[][] arr;
@@ -25,7 +26,6 @@ public class DZ {
         for (int i = 0; i < T; i++) {
             long A = arr[i][0];
             long B = arr[i][1];
-//            System.out.println(A + " " + B);
             Map<Long, Integer> map_NOD = P(NOD(A, B));
             Map<Long, Integer> map_A = P(A);
             Map<Long, Integer> map_B = P(B);
@@ -38,6 +38,7 @@ public class DZ {
                     map_B.put(key, (map_B.get(key) - entry_NOD.getValue()));
                 }
             }
+            
             Long max_A = maxKeyinMap(map_A);
             Long max_B = maxKeyinMap(map_B);
             long maxNOD = 0;
@@ -55,7 +56,6 @@ public class DZ {
 
     private static void reedFile() throws IOException {
         T = Integer.parseInt(reader.readLine());
-//        if (n < 1 || n > 20) return;
         arr = new long[T][2];
         for (int i = 0; i < T; i++) {
             String str = reader.readLine();
